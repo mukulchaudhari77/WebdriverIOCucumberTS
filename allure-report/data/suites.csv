@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Fri Nov 26 13:59:17 IST 2021","Fri Nov 26 14:00:10 IST 2021","52999","","This is page for MyStore for AutomationPractice","","This is page for MyStore for AutomationPractice","Signing the page of MyStore","Signing the page of MyStore",""
-"passed","Fri Nov 26 13:59:07 IST 2021","Fri Nov 26 13:59:11 IST 2021","3628","","Landing page of internet herokuapp","","Landing page of internet herokuapp","Validate checkbox","Validate checkbox",""
-"passed","Fri Nov 26 13:58:53 IST 2021","Fri Nov 26 13:59:01 IST 2021","7517","","This is Drop Down Validation","","This is Drop Down Validation","Dropdown Validation","Dropdown Validation",""
