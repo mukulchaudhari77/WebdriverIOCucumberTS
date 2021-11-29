@@ -1,0 +1,156 @@
+{
+  "uid" : "12ca5bfbf2485979",
+  "name" : "Validate checkbox",
+  "fullName" : "Landing page of internet herokuapp.Validate checkbox",
+  "historyId" : "c390c5a6a5c1226d42ec679f235432a6",
+  "time" : {
+    "start" : 1637913503201,
+    "stop" : 1637913506568,
+    "duration" : 3367
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I am on the Landing page of herokuapp",
+      "time" : {
+        "start" : 1637913503204,
+        "stop" : 1637913505990,
+        "duration" : 2786
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Then I should see a header text \"Welcome to the-internet\"",
+      "time" : {
+        "start" : 1637913505990,
+        "stop" : 1637913506052,
+        "duration" : 62
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "When I click on chechbox menu",
+      "time" : {
+        "start" : 1637913506052,
+        "stop" : 1637913506437,
+        "duration" : 385
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Then I should be navigated to checkbox page",
+      "time" : {
+        "start" : 1637913506437,
+        "stop" : 1637913506501,
+        "duration" : 64
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Then I validate checkbox2 is selected",
+      "time" : {
+        "start" : 1637913506501,
+        "stop" : 1637913506548,
+        "duration" : 47
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "Then I validate checkbox1 is selected",
+      "time" : {
+        "start" : 1637913506548,
+        "stop" : 1637913506567,
+        "duration" : 19
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 6
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-1"
+  }, {
+    "name" : "suite",
+    "value" : "Landing page of internet herokuapp"
+  }, {
+    "name" : "testClass",
+    "value" : "Landing page of internet herokuapp"
+  }, {
+    "name" : "testMethod",
+    "value" : "Validate checkbox"
+  }, {
+    "name" : "package",
+    "value" : "Landing page of internet herokuapp"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome-96.0.4664.45"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "12ca5bfbf2485979.json",
+  "parameterValues" : [ "chrome-96.0.4664.45" ]
+}

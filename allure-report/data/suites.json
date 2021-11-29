@@ -1,0 +1,56 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "This is Drop Down Validation",
+    "children" : [ {
+      "name" : "Dropdown Validation",
+      "uid" : "7fb2d640c759a7f1",
+      "parentUid" : "b8eb323789369a467cc4adbac031e7d6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637915333974,
+        "stop" : 1637915341491,
+        "duration" : 7517
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-96.0.4664.45" ]
+    } ],
+    "uid" : "b8eb323789369a467cc4adbac031e7d6"
+  }, {
+    "name" : "Landing page of internet herokuapp",
+    "children" : [ {
+      "name" : "Validate checkbox",
+      "uid" : "36f2d920f82825de",
+      "parentUid" : "aa96c3a5d4861381cdaa5b43db650c2e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637915347714,
+        "stop" : 1637915351342,
+        "duration" : 3628
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-96.0.4664.45" ]
+    } ],
+    "uid" : "aa96c3a5d4861381cdaa5b43db650c2e"
+  }, {
+    "name" : "This is page for MyStore for AutomationPractice",
+    "children" : [ {
+      "name" : "Signing the page of MyStore",
+      "uid" : "1a4bd7375e972f56",
+      "parentUid" : "b92c848e7c25d76065973db95f992c03",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637915357271,
+        "stop" : 1637915410270,
+        "duration" : 52999
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-96.0.4664.45" ]
+    } ],
+    "uid" : "b92c848e7c25d76065973db95f992c03"
+  } ]
+}

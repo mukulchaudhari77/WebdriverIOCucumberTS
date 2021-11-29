@@ -1,0 +1,31 @@
+[ {
+  "uid" : "36f2d920f82825de",
+  "name" : "Validate checkbox",
+  "time" : {
+    "start" : 1637915347714,
+    "stop" : 1637915351342,
+    "duration" : 3628
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7fb2d640c759a7f1",
+  "name" : "Dropdown Validation",
+  "time" : {
+    "start" : 1637915333974,
+    "stop" : 1637915341491,
+    "duration" : 7517
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1a4bd7375e972f56",
+  "name" : "Signing the page of MyStore",
+  "time" : {
+    "start" : 1637915357271,
+    "stop" : 1637915410270,
+    "duration" : 52999
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

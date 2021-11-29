@@ -1,6 +1,6 @@
 class SignUpPage {
 
-        get pageHeading() { return $("//*[@id='account-creation_form']/div[1]/h3") }
+        get pageHeading() { return $("//h3[text()='Your personal information']") }
         get radioButton() { return $("#id_gender1"); }
         get firstnameText() { return $("//label[@for='customer_firstname']"); }
         get firstName() { return $("//input[@id='customer_firstname']") }

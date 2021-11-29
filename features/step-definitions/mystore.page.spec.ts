@@ -4,6 +4,11 @@ import signInPage from "../pageobjects/signIn.page";
 import signUpPage from "../pageobjects/siginUp.page";
 import signup from "../testdata/signUp.json";
 import randomData from "faker"
+import womenPage from "../pageobjects/women.page";
+import summaryPage from "../pageobjects/summary.page";
+import addressPage from "../pageobjects/address.page";
+import shippingPage from "../pageobjects/shipping.page";
+import paymentPage from "../pageobjects/payment.page";
 
 Given(/^This is the Home Page of MyStore$/, async () => {
     await signInPage.homePageLink()
@@ -53,7 +58,48 @@ When(/^I enter the data in all fields as$/, async () => {
 When(/^I click on the Register Button$/, async () => {
     await signUpPage.registerButton.click();
 });
-
 Then(/^I should be navigated to another page and can see the text as \"([^\"]*)\"$/, async (myaccount) => {
     await expect(myAccountPage.myAccountText).toHaveText(myaccount);
 });
+When(/^I click the women section button$/, async () => {
+    await womenPage.womenbutton.click();
+});
+Then(/^it should navigate to the women section page i see \"([^\"]*)\"$/, async (women) => {
+    await expect(womenPage.womenvalidate).toHaveText(women);
+});
+When(/^I perform some actions in women section page$/, async () => {
+    await womenPage.hover.scrollIntoView();
+    await womenPage.clkaddtocartbtn.click();
+});
+Then(/^I should validate the path of message \"([^\"]*)\"$/, async (productsuccessfullyaddedtoyourshoppingcart) => {
+    await expect(womenPage.addtocartmsg).toHaveText(productsuccessfullyaddedtoyourshoppingcart);
+});
+When(/^I click on proceed to checkout button$/, async () => {
+    await womenPage.checkout.click();
+});
+Then(/^it should show title heading \"([^\"]*)\"$/, async (shoppingcartsummary) => {
+    await expect(summaryPage.heading).toHaveTextContaining(shoppingcartsummary);
+});
+When(/^I click on proceed to checkout in the summary page$/, async () => {
+    await summaryPage.chkout.click();
+});
+Then(/^I navigate and validate to the address page and I see \"([^\"]*)\"$/, async (addresses) => {
+    await expect(addressPage.heading).toHaveText(addresses);
+});
+When(/^I will click on proceed button$/, async () => {
+    await addressPage.proceed.click();
+});
+Then(/^I will validate the navigated shipping page \"([^\"]*)\"$/, async (shipping) => {
+    await expect(shippingPage.shippingHeading).toHaveText(shipping);
+});
+When(/^I perform action select check box and click on proceed to checkout button$/, async () => {
+    await shippingPage.checkbox.click();
+    await shippingPage.shippingCheckout.click();
+});
+Then(/^I will get navigate and validate to payment page \"([^\"]*)\"$/, async (pleasechooseyourpaymentmethod) => {
+    await expect(paymentPage.paymentHeading).toHaveText(pleasechooseyourpaymentmethod);
+});
+
+
+
+
