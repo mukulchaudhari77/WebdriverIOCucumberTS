@@ -27,3 +27,8 @@ Feature: This is for Creating Account and adding the Product Items to Cart
         Then I will validate the navigated shipping page "SHIPPING"
         When I perform action select check box and click on proceed to checkout button
         Then I will get navigate and validate to payment page "PLEASE CHOOSE YOUR PAYMENT METHOD"
+        When I click on payment option
+        Then I see the Message "ORDER SUMMARY"
+        When I click I confirm my order
+        Then I navigate and validate the order confirmation page "ORDER CONFIRMATION"
+

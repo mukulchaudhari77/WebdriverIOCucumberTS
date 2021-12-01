@@ -1,21 +1,20 @@
 {
-    "firstName": "MUKUL",
-    "lastName": "Chaudhari",
-    "password": "tony@stark",
-    "DOB": {
-        "day": "29",
-        "month": "6",
-        "year": "1998"
+    "name": {
+        "firstname": "MUKUL",
+        "lastname": "Chaudhari"
     },
-    "Address": {
-        "addressFirstName": "KingMaker",
-        "addressLastName": "KingSlayer",
-        "address": " mumbai agra highway jay hind",
-        "city": "Nashik",
-        "state": "1",
-        "zipcode": "00000",
+    "dob": {
+        "day": 29,
+        "month": 6,
+        "year": 12
+    },
+    "address": {
+        "address1": "mumbai",
+        "city": "Nasik",
+        "state": 6,
+        "zipcode": 50234,
         "country": "United States",
-        "mobileNumber": "6325641256",
+        "mobileNumber": 6325641256,
         "aliasAddress": "India is Best"
     }
 }

@@ -1,62 +1,44 @@
 import { Given, Then, When } from "@wdio/cucumber-framework";
-import myAccountPage from "../pageobjects/myAccount.Page";
+import myAccountPage from "../pageobjects/signup/myAccount.page";
 import signInPage from "../pageobjects/signIn.page";
-import signUpPage from "../pageobjects/siginUp.page";
+import signUpPage from "../pageobjects/signup/siginUp.page";
 import signup from "../testdata/signUp.json";
-import randomData from "faker"
-import womenPage from "../pageobjects/women.page";
-import summaryPage from "../pageobjects/summary.page";
-import addressPage from "../pageobjects/address.page";
-import shippingPage from "../pageobjects/shipping.page";
-import paymentPage from "../pageobjects/payment.page";
-
+import randomData from "faker";
+import womenPage from "../pageobjects/menu/women.page";
+import summaryPage from "../pageobjects/cart/cartsummary.page";
+import addressPage from "../pageobjects/cart/address.page";
+import shippingPage from "../pageobjects/cart/shipping.page";
+import paymentPage from "../pageobjects/cart/payment.page";
+import orderPage from "../pageobjects/cart/order.page";
+import siginUpPage from "../pageobjects/signup/siginUp.page";
 Given(/^This is the Home Page of MyStore$/, async () => {
     await signInPage.homePageLink()
 });
-
 When(/^I Click on Sign in$/, async () => {
     await signInPage.clickOnSIgnIn.click();
 });
-
 Then(/^I should see the Text as \"([^\"]*)\"$/, async (createanaccount) => {
     await expect(signInPage.createAccountText).toHaveText(createanaccount);
 });
-
 When(/^I enter email address it should create account$/, async () => {
     await signInPage.enteringEmailAddress.setValue(randomData.internet.email())
 });
-
 When(/^I click on create an account button$/, async () => {
     await signInPage.ClickOnCreateAccountButton.click();
 });
-
 Then(/^I should navigate and see the heading as \"([^\"]*)\"$/, async (yourpersonalinformation) => {
     await expect(signUpPage.pageHeading).toHaveText(yourpersonalinformation);
 });
-
 When(/^I enter the data in all fields as$/, async () => {
-
+    
     await signUpPage.radioButton.isSelected();
-    await signUpPage.firstName.setValue(signup.firstName);
-    await signUpPage.lastname.setValue(signup.lastName);
-    await signUpPage.password.setValue(signup.password);
-    await signUpPage.dobDay.selectByAttribute('value', signup.DOB.day);
-    await signUpPage.dobMonth.selectByAttribute('value', signup.DOB.month);
-    await signUpPage.dobYear.selectByAttribute('value', signup.DOB.year);
-    await signUpPage.addressFirstName.setValue(signup.Address.addressFirstName);
-    await signUpPage.addressLastName.setValue(signup.Address.addressLastName);
-    await signUpPage.address.setValue(signup.Address.address);
-    await signUpPage.city.setValue(signup.Address.city);
-    await signUpPage.state.selectByAttribute('value', signup.Address.state);
-    await signUpPage.zipCode.setValue(signup.Address.zipcode);
-    await signUpPage.country.selectByVisibleText(signup.Address.country);
-    await signUpPage.mobileNumber.setValue(signup.Address.mobileNumber);
-    await signUpPage.aliasAddress.setValue(signup.Address.aliasAddress);
-
+    await signUpPage.setFirstAndLastName(signup.name);
+    await signUpPage.password.setValue(randomData.internet.password(8));
+    await signUpPage.selectDateOfBirth(signup.dob)
+    await siginUpPage.setAddress(signup.address)
 });
-
 When(/^I click on the Register Button$/, async () => {
-    await signUpPage.registerButton.click();
+    await signUpPage.clickregisterbutton()
 });
 Then(/^I should be navigated to another page and can see the text as \"([^\"]*)\"$/, async (myaccount) => {
     await expect(myAccountPage.myAccountText).toHaveText(myaccount);
@@ -99,7 +81,15 @@ When(/^I perform action select check box and click on proceed to checkout button
 Then(/^I will get navigate and validate to payment page \"([^\"]*)\"$/, async (pleasechooseyourpaymentmethod) => {
     await expect(paymentPage.paymentHeading).toHaveText(pleasechooseyourpaymentmethod);
 });
-
-
-
-
+When(/^I click on payment option$/, async () => {
+    await paymentPage.paymentOption.click();
+});
+Then(/^I see the Message \"([^\"]*)\"$/, async (ordersummary) => {
+    await expect(orderPage.orderSummary).toHaveText(ordersummary);
+});
+When(/^I click I confirm my order$/, async () => {
+    await orderPage.confrimOrder.click();
+});
+Then(/^I navigate and validate the order confirmation page \"([^\"]*)\"$/, async (orderconfirmation) => {
+    await expect(orderPage.ConfirmationMsg).toHaveText(orderconfirmation);
+});
